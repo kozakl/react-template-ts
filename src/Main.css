@@ -15,5 +15,5 @@ input, textarea, select {
 }
 
 body {
-  background: var(--color-background);
+  background: var(--color-green-50);
 }
