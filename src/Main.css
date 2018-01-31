@@ -2,9 +2,9 @@
 @import './media.css';
 @import './variables.css';
 
-& *,
-& *::before,
-& *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
