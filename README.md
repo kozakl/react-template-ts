@@ -1,10 +1,10 @@
 # React Template TS
-Create Template for TypeScript and React
+Create React Template with TypeScript
 
 ## Quick Usage
 ```
 npm install -g react-template-ts
 
-react-template-ts MyApp
-cd MyApp
+react-template-ts my-app
+cd my-app
 ```
