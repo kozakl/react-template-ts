@@ -1,0 +1,15 @@
+.content {
+  text-align: center;
+}
+
+.text {
+  font: 2rem sans-serif;
+}
+
+.controls {
+  margin-top: 5rem;
+  
+  & > button {
+    margin-right: 0.25rem;
+  }
+}
