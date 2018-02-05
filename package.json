@@ -1,6 +1,6 @@
 {
   "name": "react-template-ts2",
-  "version": "0.7.1",
+  "version": "0.8.1",
   "bin": {
     "react-template-ts2": "./index.js"
   },
