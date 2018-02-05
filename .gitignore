@@ -1,7 +1,3 @@
-/.idea
-/node_modules
-/public/bundle.*
-/coverage
-/Mats/*
-!/Mats/Graphics/
+.idea
+node_modules
 TODO.txt
