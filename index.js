@@ -6,7 +6,7 @@ const pwd 	   = process.env.PWD,
 	  name 	   = process.argv[2],
 	  template = process.argv[3];
 if (!name)
-	return console.error('Usage: react-template-ts2 <project-name> <--redux? | --router?>');
+	return console.error('Usage: react-template-ts <project-name> <--redux? | --router?>');
 
 switch (template)
 {
