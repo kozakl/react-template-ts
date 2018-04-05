@@ -1,4 +1,4 @@
-const RestOptimize = require('./tools/plugins/RestOptimize');
+const RestOptimizePlugin = require('rest-optimize-webpack-plugin');
 
 module.exports = {
     entry: './src/Main.tsx',
@@ -17,6 +17,10 @@ module.exports = {
                 loader: 'ts-loader'
             },
             {
+                test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+                use: ['url-loader']
+            },
+            {
                 test: /\.css$/,
                 use: [
                     'style-loader',
@@ -33,6 +37,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new RestOptimize()
+        new RestOptimizePlugin()
     ]
 };
