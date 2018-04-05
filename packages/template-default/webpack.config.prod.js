@@ -1,20 +1,25 @@
-const webpack      = require('webpack'),
-      RestOptimize = require('./tools/plugins/RestOptimize');
+const DefinePlugin       = require('webpack').DefinePlugin,
+      UglifyJsPlugin     = require('webpack').optimize.UglifyJsPlugin,
+      RestOptimizePlugin = require('rest-optimize-webpack-plugin');
 
 module.exports = {
     entry: './src/Main.tsx',
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+    },
     output: {
         path: __dirname,
         filename: './public/bundle.js'
-    },
-    resolve: {
-        extensions: ['.ts', '.tsx', '.js']
     },
     module: {
         loaders: [
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader'
+            },
+            {
+                test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+                use: ['url-loader']
             },
             {
                 test: /\.css$/,
@@ -32,12 +37,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DefinePlugin({
+        new DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')
             }
         }),
-        new RestOptimize(),
-        new webpack.optimize.UglifyJsPlugin()
+        new RestOptimizePlugin(),
+        new UglifyJsPlugin()
     ]
 };
