@@ -1,7 +1,14 @@
-/.idea
-/node_modules
-/public/bundle.*
-/coverage
-/Mats/*
-!/Mats/Graphics/
+# Dependency
+node_modules/
+
+# Mats
+mats/*
+
+# Others
+.idea/
 TODO.txt
+
+# Public
+public/*
+!public/favicon.png
+!public/index.html
