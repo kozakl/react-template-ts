@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "yarn test -- --watchAll",
-    "publish": "babel-node ./tools/tasks/publish.js"
+    "publish": "babel-node ./tasks/publish.js"
   },
   "dependencies": {
     "react": "^16.2.0",
