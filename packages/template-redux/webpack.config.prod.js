@@ -3,12 +3,12 @@ const webpack      = require('webpack'),
 
 module.exports = {
     entry: './src/Main.tsx',
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+    },
     output: {
         path: __dirname,
         filename: './public/bundle.js'
-    },
-    resolve: {
-        extensions: ['.ts', '.tsx', '.js']
     },
     module: {
         loaders: [
