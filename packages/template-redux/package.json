@@ -1,8 +1,5 @@
 {
   "name": "react-template-ts",
-  "repository": {
-    "type": "git"
-  },
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "yarn test -- --watchAll",
