@@ -33,8 +33,7 @@ function npmInstall()
 	const env = {
 		NPM_CONFIG_COLOR: 'always'
 	};
-	const child = exec(`cd ${pwd}/${name} && npm install`,
-	                   {env});
+	const child = exec(`cd ${pwd}/${name} && npm install`, {env});
 	child.stdout.on('data', console.log);
 	child.stderr.on('data', console.log);
 }
