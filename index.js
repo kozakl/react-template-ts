@@ -11,21 +11,21 @@ if (!name)
 switch (template)
 {
 	case '--redux' :
-		copyTemplate('template-redux');
+		copyTemplate('redux');
 		npmInstall();
 		break;
 	case '--router' :
-		copyTemplate('template-router');
+		copyTemplate('router');
 		npmInstall();
 		break;
 	default :
-		copyTemplate('template-default');
+		copyTemplate('default');
 		npmInstall();
 }
 
 function copyTemplate(template)
 {
-	fs.copySync(`${__dirname}/packages/${template}`, `${pwd}/${name}`);
+	fs.copySync(`${__dirname}/templates/${template}`, `${pwd}/${name}`);
 }
 
 function npmInstall()
