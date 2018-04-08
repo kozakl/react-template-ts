@@ -1,13 +1,13 @@
-const RestOptimize = require('./tools/plugins/RestOptimize');
+const RestOptimizePlugin = require('rest-optimize-webpack-plugin');
 
 module.exports = {
     entry: './src/Main.tsx',
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+    },
     output: {
         path: __dirname,
         filename: './public/bundle.js'
-    },
-    resolve: {
-        extensions: ['.ts', '.tsx', '.js']
     },
     //devtool: 'source-map',
     module: {
@@ -15,6 +15,10 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader'
+            },
+            {
+                test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+                use: ['url-loader']
             },
             {
                 test: /\.css$/,
@@ -33,6 +37,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new RestOptimize()
+        new RestOptimizePlugin()
     ]
 };

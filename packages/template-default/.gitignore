@@ -1,0 +1,17 @@
+# Dependency
+node_modules/
+
+# Jest
+coverage/
+
+# Mats
+mats/*
+
+# Others
+.idea/
+TODO.txt
+
+# Public
+public/*
+!public/favicon.png
+!public/index.html

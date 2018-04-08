@@ -1,16 +1,19 @@
 {
   "name": "react-template-ts",
-  "version": "2.1.1",
-  "bin": {
-    "react-template-ts": "./index.js"
-  },
-  "dependencies": {
-    "fs-extra": "^4.0.1"
-  },
+  "version": "2.2.0",
   "author": {
     "name": "Łukasz Kozak",
     "email": "kozakluke@gmail.com",
     "url": "https://github.com/kozakluke"
   },
-  "homepage": "https://github.com/kozakluke/React-Template-TS"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kozakluke/react-template-ts"
+  },
+  "bin": {
+    "react-template-ts": "./index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^4.0.1"
+  }
 }
