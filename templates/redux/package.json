@@ -1,9 +1,9 @@
 {
   "name": "react-template-ts",
   "scripts": {
+    "publish": "babel-node ./tasks/publish.js",
     "test": "jest --coverage",
-    "test:watch": "yarn test -- --watchAll",
-    "publish": "babel-node ./tasks/publish.js"
+    "test:watch": "yarn test -- --watchAll"
   },
   "jest": {
     "transform": {
