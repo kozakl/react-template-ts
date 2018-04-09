@@ -21,5 +21,5 @@ export default class Content extends React.PureComponent<ContentProps>
 }
 
 interface ContentProps {
-    message:string;    
+    message:string;
 }
