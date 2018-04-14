@@ -1,4 +1,5 @@
-const RestOptimizePlugin = require('rest-optimize-webpack-plugin');
+const DefinePlugin       = require('webpack').DefinePlugin,
+      RestOptimizePlugin = require('rest-optimize-webpack-plugin');
 
 module.exports = {
     entry: './src/Main.tsx',
