@@ -8,8 +8,8 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js']
     },
     output: {
-        path: __dirname,
-        filename: './public/bundle.js'
+        path: __dirname + '/public',
+        filename: 'bundle.js'
     },
     module: {
         loaders: [
