@@ -1,17 +1,18 @@
-# Dependency
+# Dependencies
 node_modules/
 
-# Jest
+# Testing
 coverage/
 
 # Mats
 mats/*
-
-# Others
-.idea/
-TODO.txt
+!mats/assets/
 
 # Public
 public/*
 !public/favicon.png
 !public/index.html
+
+# Others
+.idea/
+TODO.txt

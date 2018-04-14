@@ -1,7 +1,9 @@
 {
   "name": "react-template-ts",
   "scripts": {
-    "publish": "babel-node ./tasks/publish.js",
+    "build": "webpack --config webpack.config.prod.js",
+    "deploy": "babel-node ./tasks/deploy.js",
+    "start": "webpack-dev-server --content-base public/",
     "test": "jest --coverage",
     "test:watch": "yarn test -- --watchAll"
   },
@@ -44,6 +46,8 @@
     "ts-loader": "^3.1.1",
     "typescript": "^2.6.2",
     "webpack": "^2.6.1",
-    "webpack-core": "^0.6.9"
+    "webpack-cli": "^2.0.14",
+    "webpack-core": "^0.6.9",
+    "webpack-dev-server": "^2.9.1"
   }
 }
