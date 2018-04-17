@@ -10,7 +10,6 @@ module.exports = {
         path: __dirname + '/public',
         filename: 'bundle.js'
     },
-    //devtool: 'source-map',
     module: {
         loaders: [
             {
@@ -36,6 +35,12 @@ module.exports = {
                 ]
             }
         ]
+    },
+    devtool: 'source-map',
+    devServer: {
+        contentBase: 'public/',
+        historyApiFallback: true,
+        open: 'google-chrome-beta'
     },
     plugins: [
         new DefinePlugin({
