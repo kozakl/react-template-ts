@@ -3,7 +3,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
     "publish": "babel-node ./tasks/publish.js",
-    "start": "webpack-dev-server --content-base public/",
+    "start": "webpack-dev-server --config webpack.config.js",
     "test": "jest --coverage",
     "test:watch": "yarn test -- --watchAll"
   },
