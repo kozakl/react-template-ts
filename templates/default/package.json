@@ -2,6 +2,7 @@
   "name": "react-template-ts",
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
+    "clean": "babel-node ./tasks/clean.js",
     "publish": "babel-node ./tasks/publish.js",
     "start": "webpack-dev-server --config webpack.config.js",
     "test": "jest --coverage",
