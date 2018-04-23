@@ -1,19 +1,37 @@
 import fs from 'fs-extra';
+import path from 'path';
 import {exec} from 'child_process';
 
 const server  = '/home/luke/Public/kozakluke.bitbucket.org/',
-      process = exec('git describe --tags');
-process.stdout.on('data', (tag)=> {
-    const project = 'react-ts-template/' + tag.slice(0, tag.lastIndexOf('-')),
-          cache   = Math.random();
-    
+       process = exec('git rev-parse --abbrev-ref HEAD && git describe --tags');
+process.stdout.on('data', (result)=> {
+    const name = require('../package.json').name;
+    if (!result.includes('fatal:'))
+    {
+        const lines  = result.trim().split(/\s*[\r\n]+\s*/g),
+               branch = lines[0],
+               tag    = lines[1];
+        if (branch === 'master')
+            publish(path.join(name, tag));
+        else
+            publish(path.join(name, branch));
+    }
+    else
+        publish(name)
+});
+
+function publish(project)
+{
     fs.removeSync(server + project);
     fs.copySync('./public', server + project);
-    fs.renameSync(server + project + '/bundle.js',
-                  server + project + `/bundle-${cache}.js`);
-    fs.writeFileSync(server + project + '/index.html',
-        fs.readFileSync(server + project + '/index.html', 'utf8')
-        .replace('bundle.js', `bundle-${cache}.js`));
+    if (fs.existsSync(server + project + '/bundle.js')) {
+        const cache = Math.random();
+        fs.renameSync(server + project + '/bundle.js',
+                      server + project + `/bundle-${cache}.js`);
+        fs.writeFileSync(server + project + '/index.html',
+            fs.readFileSync(server + project + '/index.html', 'utf8')
+            .replace('bundle.js', `bundle-${cache}.js`));
+    }
     
     const process = exec(`cd ${server} &&\
                           git add . &&\
@@ -21,4 +39,4 @@ process.stdout.on('data', (tag)=> {
                           git push origin`);
     process.stdout.on('data', console.log);
     process.stderr.on('data', console.log);
-});
+}
