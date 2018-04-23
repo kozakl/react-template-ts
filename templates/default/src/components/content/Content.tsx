@@ -3,7 +3,7 @@ import * as style from './Content.css';
 /**
  * @author kozakluke@gmail.com
  */
-export default class Content extends React.PureComponent<ContentProps>
+export default class Content extends React.PureComponent<Props>
 {
     onClick = ()=>
     {
@@ -20,6 +20,6 @@ export default class Content extends React.PureComponent<ContentProps>
     }
 }
 
-interface ContentProps {
+interface Props {
     message:string;
 }
