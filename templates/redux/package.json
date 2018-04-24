@@ -4,7 +4,7 @@
     "build": "webpack --config webpack.config.prod.js",
     "clean": "babel-node ./tasks/clean.js",
     "deploy": "babel-node ./tasks/deploy.js",
-    "start": "webpack-dev-server --config webpack.config.js",
+    "start": "webpack-dev-server2 --config webpack.config.js",
     "test": "jest --coverage",
     "test:watch": "yarn test -- --watchAll"
   },
@@ -49,6 +49,6 @@
     "webpack": "^2.6.1",
     "webpack-cli": "^2.0.14",
     "webpack-core": "^0.6.9",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server2": "^2.12.0"
   }
 }
