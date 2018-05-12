@@ -46,6 +46,7 @@
     "style-loader": "^0.13.2",
     "ts-loader": "^3.1.1",
     "typescript": "^2.6.2",
+    "url-loader": "^1.0.1",
     "webpack": "^2.6.1",
     "webpack-cli": "^2.0.14",
     "webpack-core": "^0.6.9",
