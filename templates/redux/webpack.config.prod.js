@@ -1,6 +1,6 @@
 const DefinePlugin       = require('webpack').DefinePlugin,
-      UglifyJsPlugin     = require('webpack').optimize.UglifyJsPlugin,
-      RestOptimizePlugin = require('rest-optimize-webpack-plugin');
+       UglifyJsPlugin     = require('webpack').optimize.UglifyJsPlugin,
+       RestOptimizePlugin = require('rest-optimize-webpack-plugin');
 
 module.exports = {
     entry: './src/Main.tsx',
