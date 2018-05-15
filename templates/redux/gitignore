@@ -6,7 +6,6 @@ coverage/
 
 # Mats
 mats/*
-!mats/assets/
 
 # Public
 public/*
