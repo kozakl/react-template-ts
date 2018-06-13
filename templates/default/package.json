@@ -1,6 +1,7 @@
 {
   "name": "react-template-ts",
   "scripts": {
+    "prebuild": "rm -rf ./public/assets",
     "build": "webpack --config webpack.config.prod.js",
     "clean": "babel-node ./tasks/clean.js",
     "deploy": "babel-node ./tasks/deploy.js",
