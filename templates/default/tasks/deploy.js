@@ -12,15 +12,15 @@ process.stdout.on('data', (result)=> {
                branch = lines[0],
                tag    = lines[1];
         if (branch === 'master')
-            publish(path.join(name, tag));
+            deploy(path.join(name, tag));
         else
-            publish(path.join(name, branch));
+            deploy(path.join(name, branch));
     }
     else
-        publish(name)
+        deploy(name)
 });
 
-function publish(project)
+function deploy(project)
 {
     fs.removeSync(server + project);
     fs.copySync('./public', server + project);

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-const fs 	 = require('fs-extra'),
-	  {exec} = require('child_process');
+const fs = require('fs-extra');
+const {exec} = require('child_process');
 
-const pwd 	   = process.env.PWD,
-	  name 	   = process.argv[2],
-	  template = process.argv[3];
+const pwd 	    = process.env.PWD,
+       name 	= process.argv[2],
+	   template = process.argv[3];
 if (!name)
 	return console.error('Usage: react-template-ts <project-name> <--redux? | --router?>');
 
