@@ -5,9 +5,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 
 input, textarea, select {
