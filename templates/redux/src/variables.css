@@ -1,7 +1,7 @@
 :root {
-  --font-primary: sans-serif;
-  --font-secondary: sans-serif;
-  --font-icons: 'Icons';
+  --primary-font: sans-serif;
+  --secondary-font: sans-serif;
+  --icons-font: 'Icons';
   
   --primary-text-color: red;
   --secondary-text-color: green;
