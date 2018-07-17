@@ -1,5 +1,4 @@
-const DefinePlugin       = require('webpack').DefinePlugin,
-      RestOptimizePlugin = require('rest-optimize-webpack-plugin');
+const DefinePlugin = require('webpack').DefinePlugin;
 
 module.exports = {
     entry: './src/Main.tsx',
@@ -17,11 +16,14 @@ module.exports = {
                 loader: 'ts-loader'
             },
             {
-                test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
-                use: ['url-loader']
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
             },
             {
-                test: /\.css$/,
+                test: /\.pcss$/,
                 use: [
                     'style-loader',
                     {
@@ -33,6 +35,17 @@ module.exports = {
                     },
                     'postcss-loader'
                 ]
+            },
+            {
+                test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+                use: ['url-loader']
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]'
+                }
             }
         ]
     },
@@ -48,7 +61,6 @@ module.exports = {
                 'NODE_ENV': JSON.stringify('development'),
                 'API_URL': JSON.stringify('')
             }
-        }),
-        new RestOptimizePlugin()
+        })
     ]
 };
