@@ -1,5 +1,5 @@
 import * as actions from '../actions';
-import {ContentState} from '../states';
+import {ContentState} from '../types';
 /**
  * @author kozakluke@gmail.com
  */
