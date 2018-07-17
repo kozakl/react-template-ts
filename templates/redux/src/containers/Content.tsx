@@ -1,6 +1,7 @@
 import * as actions from '../actions';
 import Content from '../components/content';
-import {connect, Dispatch} from 'react-redux';
+import {connect} from 'react-redux';
+import {Dispatch} from 'redux';
 import {StoreState} from '../types';
 /**
  * @author kozakluke@gmail.com
