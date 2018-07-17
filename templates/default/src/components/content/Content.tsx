@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as style from './Content.css';
+import * as style from './Content.pcss';
 /**
  * @author kozakluke@gmail.com
  */

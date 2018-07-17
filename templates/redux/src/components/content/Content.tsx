@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as style from './Content.css';
+import * as style from './Content.pcss';
 import {StatelessComponent} from 'react';
 /**
  * @author kozakluke@gmail.com
