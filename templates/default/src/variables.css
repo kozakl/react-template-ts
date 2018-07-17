@@ -1,10 +1,10 @@
 :root {
-  --primary-font: sans-serif;
-  --secondary-font: sans-serif;
-  --icons-font: 'Icons';
+  --font-primary: sans-serif;
+  --font-secondary: sans-serif;
+  --font-icons: 'Icons';
   
-  --primary-text-color: red;
-  --secondary-text-color: green;
+  --text-color-primary: red;
+  --text-color-secondary: green;
   
   --weight-light: 300;
   --weight-regular: 400;
