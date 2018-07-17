@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as style from './Content.pcss';
-import {StatelessComponent} from 'react';
+import {PureComponent, StatelessComponent} from 'react';
 /**
  * @author kozakluke@gmail.com
  */
-export default class Content extends React.PureComponent<Props, StatelessComponent>
+export default class Content extends PureComponent<Props, StatelessComponent>
 {
     public static defaultProps:Partial<Props> = {
         color: 'red'
