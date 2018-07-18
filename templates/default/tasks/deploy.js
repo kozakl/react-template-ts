@@ -3,7 +3,7 @@ import path from 'path';
 import {exec} from 'child_process';
 
 const server = '/home/luke/Public/kozakluke.bitbucket.org/',
-       process = exec('git rev-parse --abbrev-ref HEAD && git describe --tags');
+      process = exec('git rev-parse --abbrev-ref HEAD && git describe --tags');
 process.stdout.on('data', (result)=> {
     const name = require('../package.json').name;
     if (!result.includes('fatal:'))
