@@ -9,7 +9,7 @@ module.exports = {
     output: {
         path: __dirname + '/public',
         filename: 'bundle.js',
-        chunkFilename: '[hash:10].js'
+        chunkFilename: '[chunkhash].js'
     },
     mode: 'production',
     module: {
