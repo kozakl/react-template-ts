@@ -1,6 +1,6 @@
 import content from './content';
-import {StoreState} from '../states';
 import {combineReducers} from 'redux';
+import {StoreState} from '../types';
 /**
  * @author kozakluke@gmail.com
  */

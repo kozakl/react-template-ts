@@ -1,8 +1,8 @@
 /**
  * @author kozakluke@gmail.com
  */
-export const CHANGE_TEXT  = 'CHANGE_TEXT',
-             CHANGE_COLOR = 'CHANGE_COLOR';
+export const CHANGE_TEXT = 'changeText',
+             CHANGE_COLOR = 'changeColor';
 
 export function changeText(text:string):ChangeText
 {

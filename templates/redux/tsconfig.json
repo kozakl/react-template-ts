@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
     "strict": true,
     "strictNullChecks": false,
-    "target": "es5",
-    "jsx": "react"
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es6",
+      "es7"
+    ]
   },
   "exclude": [
     "node_modules"

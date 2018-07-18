@@ -4,7 +4,7 @@ import Content from './containers/Content';
 import reducers from './reducers';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import './Main.css';
+import './Main.pcss';
 /**
  * @author kozakluke@gmail.com
  */

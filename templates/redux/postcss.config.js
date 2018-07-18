@@ -3,9 +3,12 @@ module.exports = {
         'postcss-import': {
             root: __dirname
         },
-        'postcss-cssnext': {},
-        'postcss-each':    {},
-        'postcss-extend':  {},
-        'postcss-mixins':  {}
+        'postcss-each': {},
+        'postcss-for': {},
+        'postcss-extend': {},
+        'postcss-mixins': {},
+        'postcss-simple-vars': {},
+        'postcss-nested': {},
+        'postcss-cssnext': {}
     }
 };
