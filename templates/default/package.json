@@ -1,11 +1,12 @@
 {
   "name": "react-template-ts",
   "scripts": {
-    "prebuild": "rm -rf ./public/assets",
-    "build": "webpack --config webpack.config.prod.js",
-    "clean": "babel-node ./tasks/clean.js",
-    "deploy": "babel-node ./tasks/deploy.js",
     "start": "webpack-dev-server --config webpack.config.js",
+    "prebuild": "yarn clean-public",
+    "build": "webpack --config webpack.config.prod.js",
+    "deploy": "babel-node ./tasks/deploy.js",
+    "clean-cache": "babel-node ./tasks/clean-cache.js",
+    "clean-public": "babel-node ./tasks/clean-public.js",
     "test": "jest --coverage",
     "test:watch": "yarn test -- --watchAll"
   },

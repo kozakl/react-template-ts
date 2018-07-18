@@ -1,0 +1,4 @@
+import {exec} from 'child_process';
+
+exec(`rm -rf ./public/assets &&\
+      find ./public -name "*.js" -delete`);
