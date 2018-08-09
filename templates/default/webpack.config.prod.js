@@ -1,4 +1,4 @@
-const //RestOptimizePlugin = require('rest-optimize-webpack-plugin'),
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
       DefinePlugin = require('webpack').DefinePlugin;
 
 module.exports = {
@@ -58,6 +58,7 @@ module.exports = {
                 'API_URL': JSON.stringify('')
             }
         }),
-        //new RestOptimizePlugin()
+        process.argv.includes('--analyzer') &&
+            new BundleAnalyzerPlugin()
     ]
 };
