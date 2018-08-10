@@ -1,4 +1,5 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
+const path = require('path'),
+      BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
       DefinePlugin = require('webpack').DefinePlugin;
 
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js']
     },
     output: {
-        path: __dirname + '/public',
+        path: path.join(__dirname, 'public'),
         filename: 'bundle.js',
         chunkFilename: '[chunkhash].js'
     },
