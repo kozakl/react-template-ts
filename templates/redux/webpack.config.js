@@ -4,7 +4,10 @@ const path = require('path'),
 module.exports = {
     entry: './src/Main.tsx',
     resolve: {
-        extensions: ['.ts', '.tsx', '.js']
+        extensions: ['.ts', '.tsx', '.js'],
+        alias: {
+            res: path.join(__dirname, 'res')
+        }
     },
     output: {
         path: path.join(__dirname, 'public'),
