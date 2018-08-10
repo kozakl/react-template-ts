@@ -2,13 +2,13 @@
   "name": "react-template-ts",
   "version": "2.7.0",
   "author": {
-    "name": "Łukasz Kozak",
+    "name": "Luke Kozak",
     "email": "kozakluke@gmail.com",
-    "url": "https://github.com/kozakluke"
+    "url": "https://github.com/kozakl"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kozakluke/react-template-ts"
+    "url": "https://github.com/kozakl/react-template-ts"
   },
   "bin": {
     "react-template-ts": "./index.js"
