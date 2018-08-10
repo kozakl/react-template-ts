@@ -1,13 +1,17 @@
-const //RestOptimizePlugin = require('rest-optimize-webpack-plugin'),
+const path = require('path'),
+      BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
       DefinePlugin = require('webpack').DefinePlugin;
 
 module.exports = {
     entry: './src/Main.tsx',
     resolve: {
-        extensions: ['.ts', '.tsx', '.js']
+        extensions: ['.ts', '.tsx', '.js'],
+        alias: {
+            res: path.join(__dirname, 'res')
+        }
     },
     output: {
-        path: __dirname + '/public',
+        path: path.join(__dirname, 'public'),
         filename: 'bundle.js',
         chunkFilename: '[chunkhash].js'
     },
@@ -61,6 +65,7 @@ module.exports = {
                 'API_URL': JSON.stringify('')
             }
         }),
-        //new RestOptimizePlugin()
+        process.argv.includes('--analyzer') &&
+            new BundleAnalyzerPlugin()
     ]
 };

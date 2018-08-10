@@ -1,12 +1,16 @@
-const DefinePlugin = require('webpack').DefinePlugin;
+const path = require('path'),
+      DefinePlugin = require('webpack').DefinePlugin;
 
 module.exports = {
     entry: './src/Main.tsx',
     resolve: {
-        extensions: ['.ts', '.tsx', '.js']
+        extensions: ['.ts', '.tsx', '.js'],
+        alias: {
+            res: path.join(__dirname, 'res')
+        }
     },
     output: {
-        path: __dirname + '/public',
+        path: path.join(__dirname, 'public'),
         filename: 'bundle.js',
         chunkFilename: '[name].js'
     },
