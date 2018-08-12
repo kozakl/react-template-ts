@@ -64,5 +64,5 @@ module.exports = {
         }),
         process.argv.includes('--analyzer') &&
             new BundleAnalyzerPlugin()
-    ]
+    ].filter(p => p)
 };
