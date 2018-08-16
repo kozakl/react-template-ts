@@ -4,7 +4,7 @@
     "start": "webpack-dev-server --config webpack.config.js",
     "prebuild": "yarn clean-public",
     "build": "webpack --config webpack.config.prod.js",
-    "deploy": "babel-node ./tasks/deploy.js",
+    "deploy": "babel-node ./tasks/deploy.js ~/Public/kozakl.bitbucket.org/",
     "clean-npm": "babel-node ./tasks/clean-npm.js",
     "clean-public": "babel-node ./tasks/clean-public.js",
     "test": "jest --coverage",
