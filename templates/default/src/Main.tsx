@@ -7,11 +7,6 @@ class Main
 {
     constructor()
     {
-        window.onload = this.onLoad.bind(this);
-    }
-    
-    private onLoad()
-    {
         ReactDOM.render(
             <Content message={'Clicked!'}/>,
             document.getElementById('main')

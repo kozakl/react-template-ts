@@ -10,11 +10,6 @@ class Main
 {
     constructor()
     {
-        window.onload = this.onLoad.bind(this);
-    }
-    
-    private onLoad()
-    {
         const store = createStore(reducers);
         store.subscribe(()=> console.log(store.getState()));
         
