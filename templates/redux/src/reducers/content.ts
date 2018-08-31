@@ -1,8 +1,6 @@
 import * as actions from '../actions';
 import {ContentState} from '../types';
-/**
- * @author kozakluke@gmail.com
- */
+
 const defaultState:ContentState = {
     text: 'DEFAULT REDUCER',
     color: undefined

@@ -1,9 +1,7 @@
 import * as React from 'react';
 import * as style from './Content.pcss';
 import {PureComponent, StatelessComponent} from 'react';
-/**
- * @author kozakluke@gmail.com
- */
+
 export default class Content extends PureComponent<Props, StatelessComponent>
 {
     public static defaultProps:Partial<Props> = {

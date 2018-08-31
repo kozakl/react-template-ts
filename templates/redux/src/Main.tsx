@@ -5,9 +5,7 @@ import reducers from './reducers';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import './Main.pcss';
-/**
- * @author kozakluke@gmail.com
- */
+
 class Main
 {
     constructor()
