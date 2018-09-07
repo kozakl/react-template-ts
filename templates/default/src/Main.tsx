@@ -9,7 +9,7 @@ class Main
     {
         ReactDOM.render(
             <Content message={'Clicked!'}/>,
-            document.getElementById('main')
+            document.getElementById('main-root')
         );
     }
 }

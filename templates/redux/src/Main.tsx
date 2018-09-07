@@ -17,7 +17,7 @@ class Main
             <Provider store={store}>
                 <Content/>
             </Provider>,
-            document.getElementById('main')
+            document.getElementById('main-root')
         );
     }
 }
