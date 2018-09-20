@@ -59,7 +59,7 @@ module.exports = {
     plugins: [
         new DefinePlugin({
             'process.env': {
-                'API_URL': JSON.stringify('')
+                'API': JSON.stringify('')
             }
         }),
         process.argv.includes('--analyzer') &&
