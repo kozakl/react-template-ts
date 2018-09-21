@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Content from './components/content';
+import {Content} from './components/content';
 import './main.pcss';
 
 ReactDOM.render(
