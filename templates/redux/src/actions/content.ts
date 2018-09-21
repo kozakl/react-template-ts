@@ -1,6 +1,3 @@
-/**
- * @author kozakluke@gmail.com
- */
 export const CHANGE_TEXT = 'changeText',
              CHANGE_COLOR = 'changeColor';
 

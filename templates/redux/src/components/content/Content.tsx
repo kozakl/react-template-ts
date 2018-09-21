@@ -1,9 +1,7 @@
 import * as React from 'react';
 import * as style from './Content.pcss';
 import {PureComponent, StatelessComponent} from 'react';
-/**
- * @author kozakluke@gmail.com
- */
+
 export default class Content extends PureComponent<Props, StatelessComponent>
 {
     public static defaultProps:Partial<Props> = {
@@ -24,6 +22,9 @@ export default class Content extends PureComponent<Props, StatelessComponent>
     {
         return (
             <div className={style.content}>
+                <div className={style.logo}>
+                    <img src={require('res/logo.svg')}/>
+                </div>
                 <span className={style.text} style={{color: this.props.color}}>
                     {this.props.text}
                 </span>

@@ -3,7 +3,7 @@ const path = require('path'),
       DefinePlugin = require('webpack').DefinePlugin;
 
 module.exports = {
-    entry: './src/Main.tsx',
+    entry: './src/main.tsx',
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
         alias: {
@@ -62,7 +62,7 @@ module.exports = {
     plugins: [
         new DefinePlugin({
             'process.env': {
-                'API_URL': JSON.stringify('')
+                'API': JSON.stringify('')
             }
         }),
         process.argv.includes('--analyzer') &&
