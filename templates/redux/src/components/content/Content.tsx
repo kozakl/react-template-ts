@@ -22,6 +22,9 @@ export default class Content extends PureComponent<Props, StatelessComponent>
     {
         return (
             <div className={style.content}>
+                <div className={style.logo}>
+                    <img src={require('res/logo.svg')}/>
+                </div>
                 <span className={style.text} style={{color: this.props.color}}>
                     {this.props.text}
                 </span>
