@@ -1,7 +1,7 @@
 import * as actions from '../actions';
-import Content from '../components/content';
 import {connect} from 'react-redux';
 import {Dispatch} from 'redux';
+import {Content} from '../components/content';
 import {StoreState} from '../types';
 
 function mapStateToProps(state:StoreState) {

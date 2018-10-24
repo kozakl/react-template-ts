@@ -4,11 +4,11 @@ const {exec} = require('child_process');
 
 const pwd = process.env.PWD,
       name = process.argv[2],
-      template = process.argv[3];
+      type = process.argv[3];
 if (!name)
     return console.error('Usage: react-template-ts <project-name> <--redux? | --router?>');
 
-switch (template)
+switch (type)
 {
     case '--redux' :
         copyTemplate('redux');
@@ -25,7 +25,9 @@ switch (template)
 
 function copyTemplate(template)
 {
-    fs.copySync(`${__dirname}/templates/${template}`, `${pwd}/${name}`);
+    const project = `${pwd}/${name}`;
+    fs.copySync(`${__dirname}/templates/${template}`, project);
+    fs.renameSync(`${project}/gitignore`, `${project}/.gitignore`);
 }
 
 function npmInstall()
