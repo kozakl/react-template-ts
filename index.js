@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require('fs-extra');
-const {exec} = require('child_process');
+const {exec} = require('child_process'),
+      {copySync, renameSync} = require('fs-extra');
 
 const pwd = process.env.PWD,
       name = process.argv[2],
@@ -26,8 +26,8 @@ switch (type)
 function copyTemplate(template)
 {
     const project = `${pwd}/${name}`;
-    fs.copySync(`${__dirname}/templates/${template}`, project);
-    fs.renameSync(`${project}/gitignore`, `${project}/.gitignore`);
+    copySync(`${__dirname}/templates/${template}`, project);
+    renameSync(`${project}/gitignore`, `${project}/.gitignore`);
 }
 
 function npmInstall()
