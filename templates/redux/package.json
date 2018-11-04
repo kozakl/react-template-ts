@@ -2,6 +2,7 @@
   "name": "react-template-ts",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
+    "prebuild": "npm run clean-public",
     "build": "webpack --config webpack.config.prod.js",
     "deploy": "node -r esm ./tasks/deploy.js ~/Public/kozakl.bitbucket.org/",
     "clean-cache": "node -r esm ./tasks/clean-cache.js",
