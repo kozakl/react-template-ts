@@ -1,6 +1,7 @@
 import {exec} from 'child_process';
 import {copySync, existsSync,
-        removeSync} from 'fs-extra';
+        removeSync, renameSync,
+        readFileSync, writeFileSync} from 'fs-extra';
 import {join} from 'path';
 
 const git = exec('git rev-parse --abbrev-ref HEAD && git describe --tags');
@@ -12,7 +13,7 @@ git.stdout.on('data', (result)=> {
         const lines = result.trim().split(/\s*[\r\n]+\s*/g),
                branch = lines[0],
                tag = lines[1];
-        if (branch === 'master')
+        if (branch === 'master' && tag)
             deploy(server, join(name, tag));
         else
             deploy(server, join(name, branch));
