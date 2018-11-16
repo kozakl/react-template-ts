@@ -4,8 +4,7 @@ import {PureComponent} from 'react';
 
 export default class Content extends PureComponent<Props>
 {
-    onClick = ()=>
-    {
+    onClick = ()=> {
         console.log(this.props.message);
     };
     
