@@ -8,13 +8,11 @@ export default class Content extends PureComponent<Props, StatelessComponent>
         color: 'red'
     };
     
-    onClickChangeText = ()=>
-    {
+    onClickChangeText = ()=> {
         this.props.changeText('CHANGED TEXT');
     };
     
-    onClickChangeColor = ()=>
-    {
+    onClickChangeColor = ()=> {
         this.props.changeColor('blue');
     };
     
