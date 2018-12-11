@@ -16,5 +16,6 @@ module.exports = {
                 }
             }
         }
-    }
+    },
+    'postcss-color-function': {}
 };
