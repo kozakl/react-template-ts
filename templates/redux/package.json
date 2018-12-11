@@ -33,11 +33,13 @@
   "devDependencies": {
     "@kozakl/webpack-dev-server": "^3.1.6",
     "@types/jest": "^23.3.0",
+    "@types/node": "^10.12.12",
     "css-loader": "^1.0.0",
     "esm": "^3.0.84",
     "file-loader": "^1.1.11",
     "fs-extra": "^7.0.0",
     "jest": "^23.4.1",
+    "postcss-color-function": "^4.0.1",
     "postcss-each": "^0.10.0",
     "postcss-extend": "^1.0.5",
     "postcss-for": "^2.1.1",
