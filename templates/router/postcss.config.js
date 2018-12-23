@@ -15,7 +15,7 @@ module.exports = {
                     preserve: false
                 }
             }
-        }
-    },
-    'postcss-color-function': {}
+        },
+        'postcss-color-function': {}
+    }
 };
