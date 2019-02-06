@@ -1,6 +1,6 @@
-import * as React from 'react';
-import * as style from './Content.pcss';
 import {PureComponent, StatelessComponent} from 'react';
+import React from 'react';
+import style from './Content.pcss';
 
 export default class Content extends PureComponent<Props, StatelessComponent>
 {

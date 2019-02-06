@@ -1,10 +1,10 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import Content from './containers/Content';
-import reducers from './reducers';
+import './main.pcss';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import './main.pcss';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Content from './containers/Content';
+import reducers from './reducers';
 
 const store = createStore(reducers);
 store.subscribe(()=> console.log(store.getState()));
