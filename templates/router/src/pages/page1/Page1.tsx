@@ -1,6 +1,6 @@
-import * as React from 'react';
-import * as style from './Page1.pcss';
 import {Link} from 'react-router-dom';
+import React from 'react';
+import style from './Page1.pcss';
 
 export default function Page1()
 {

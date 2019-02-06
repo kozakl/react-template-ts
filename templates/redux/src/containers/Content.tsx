@@ -1,8 +1,8 @@
-import * as actions from '../actions';
 import {connect} from 'react-redux';
 import {Dispatch} from 'redux';
 import {Content} from '../components/content';
 import {StoreState} from '../types';
+import actions from '../actions';
 
 function mapStateToProps(state:StoreState) {
     return {
