@@ -1,5 +1,5 @@
-import * as actions from '../actions';
 import {ContentState} from '../types';
+import actions from '../actions';
 
 const defaultState:ContentState = {
     text: 'DEFAULT REDUCER',
