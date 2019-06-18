@@ -1,26 +1,29 @@
-import {PureComponent} from 'react';
+import {FunctionComponent} from 'react';
 import React from 'react';
 import style from './Content.pcss';
 
-export default class Content extends PureComponent<Props>
+const Content:FunctionComponent<Props> = (props)=>
 {
-    onClick = ()=> {
-        console.log(this.props.message);
-    };
-    
-    render()
-    {
-        return (
-            <div className={style.content}>
-                <div className={style.logo}>
-                    <img src={require('res/logo.svg')}/>
-                </div>
-                <button className={style.button} onClick={this.onClick}>Click</button>
-            </div>
-        );
+    function onClick() {
+        console.log(props.message);
     }
-}
+    
+    return (
+        <div className={style.content}>
+            <div className={style.logo}>
+                <img src={require('res/logo.svg')}/>
+            </div>
+            <button
+                className={style.button}
+                onClick={onClick}>
+                Click
+            </button>
+        </div>
+    );
+};
 
 interface Props {
-    message:string;
+    message:boolean;
 }
+
+export default Content;
