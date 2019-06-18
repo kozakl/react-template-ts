@@ -1,16 +1,14 @@
 export const CHANGE_TEXT = 'changeText',
              CHANGE_COLOR = 'changeColor';
 
-export function changeText(text:string):ChangeText
-{
+export function changeText(text:string):ChangeText {
     return {
         type: CHANGE_TEXT,
         text
     };
 }
 
-export function changeColor(color:string):ChangeColor
-{
+export function changeColor(color:string):ChangeColor {
     return {
         type: CHANGE_COLOR,
         color
