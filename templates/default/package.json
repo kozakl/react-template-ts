@@ -46,14 +46,13 @@
     "postcss-nested": "^3.0.0",
     "postcss-preset-env": "^6.4.0",
     "postcss-simple-vars": "^4.1.0",
-    "rest-optimize-webpack-plugin": "^1.0.2",
     "style-loader": "^0.21.0",
     "ts-jest": "^23.10.4",
     "ts-loader": "^4.4.2",
-    "typescript": "^3.1.6",
+    "typescript": "^3.4.5",
     "url-loader": "^1.0.1",
     "webpack": "^4.16.1",
-    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.0.8"
   }
 }
